@@ -16,3 +16,10 @@ public/mpd/music/*
 !public/mpd/music/The_Black_Keys_-_Tighten_Up.m4a
 npm-debug.log
 node_modules
+
+public/mpd/state
+public/mpd/sticker.sql
+public/mpd/tag_cache
+public/mpd/pid
+public/mpd/log
+public/mpd/database

@@ -1,0 +1,42 @@
+doctype 5
+html
+	head
+		title We Love Radio
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="loadingbar.css")
+		link(rel="stylesheet", href="weloveradio.css")
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+		script(src="/socket.io/socket.io.js")
+		script(src="/websocket.js")
+		script(src="/script.js")
+
+	body
+		audio#radiosource(preload="none", autoplay="autoplay", loop="loop")
+			source(src="http://radio.dev:8000/mpd.ogg",type="audio/mpeg")
+		#title
+			h1
+				a(href='/') We Love Radio
+			h2
+				a(href='http://thomasforicher.com', target='_blank') thomasforicher.com
+		.ttw-music-player(style='opacity: 1;')
+			img#facebook_connect(style='display:none;',src='images/X-Large_278x44.png')
+			textarea#text_box(style='display:none;',rows='1', placeholder='Insert a Youtube or a SoundCloud URL')
+			.meter
+				span(style='width: 100%; display:none')
+			.player.jp-interface
+				.album-cover
+					span.img
+						img#profile_picture(src='images/1.png')
+					span.highlight
+				.track-info
+					p.title
+					p.artist-outer(style='opacity: 1;')
+						By
+						span.artist
+				.player-controls
+					.progress-wrapper
+						.progress.jp-seek-bar(style='width: 100%;')
+							.elapsed.jp-play-bar(style='width: 3%;')
+			p.description.showing
+			.tracklist
+				ol.tracks

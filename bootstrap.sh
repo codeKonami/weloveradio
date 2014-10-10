@@ -32,7 +32,7 @@ ln -s /home/app/public_html/public/mpd /var/lib/mpd
 mpd /var/lib/mpd/mpd.conf
 mpc update
 sleep 2
-mpc update
+mpc add The_Black_Keys_-_Tighten_Up.m4a
 mpc play
 mpc repeat on
 service nginx start
